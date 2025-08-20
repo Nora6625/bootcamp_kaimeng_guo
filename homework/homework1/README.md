@@ -28,8 +28,9 @@
 - Provide visual trend insights → Visualization & Reporting (Stage 03) → Deliverable: Interactive dashboard and stakeholder memo
 
 ## Repo Plan
-/data/: Store public real estate transaction data, price indices, government statistics
-/notebooks/: Exploration of data and analysis ideas
-/src/: Reusable data processing and analysis functions
-/docs/: Stakeholder memos, analysis reports, and final presentation mater
+- /data/: Store public real estate transaction data, price indices, government statistics
+- /notebooks/: Exploration of data and analysis ideas
+- /src/: Reusable data processing and analysis functions
+- /docs/: Stakeholder memos, analysis reports, and final presentation mater
+
 
