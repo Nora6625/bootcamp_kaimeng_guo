@@ -1,0 +1,31 @@
+# Stakeholder Memo: China Real Estate Market Trends
+
+
+## 1. Summary
+The Chinese real estate market has shown signs of slowing growth, particularly in tier-1 and tier-2 cities. Property sales volumes are declining, and several developers are experiencing rising leverage and liquidity risks. This memo summarizes the latest data insights and highlights areas that require stakeholder attention.
+
+
+## 2. Key Observations
+- **Sales Trends:** Residential property sales have decreased by 8–12% year-over-year in major cities.  
+- **Price Movements:** Average housing prices remain high, but growth is stagnating. Certain regions show softening trends.  
+- **Developer Risks:** A number of developers exhibit high debt-to-asset ratios, indicating potential solvency concerns.  
+- **Market Liquidity:** Mortgage approvals and transaction volumes are slowing, which could impact market fluidity.
+
+
+## 3. Implications for Stakeholders
+- **Regulators:** Need to monitor potential defaults and consider policy adjustments to stabilize the market.  
+- **Investors:** Reassess exposure in high-risk regions or developers; consider hedging strategies.  
+- **Financial Institutions:** Review lending standards, especially for developers with high leverage.
+
+
+## 4. Recommended Next Steps
+1. **Descriptive Analysis:** Maintain a detailed, quarterly dashboard tracking sales, prices, and developer health.  
+2. **Predictive Modeling:** Use historical trends to forecast short-term price and sales movements, including risk bands.  
+3. **Scenario Planning:** Assess impacts of regulatory changes, interest rate shifts, or macroeconomic shocks on market stability.  
+4. **Decision Support:** Develop clear triggers for interventions (e.g., when a developer’s leverage exceeds 70%, or sales drop >10% QoQ).
+
+
+## 5. Deliverables
+- **Interactive Dashboard:** Highlighting risk regions, developer exposure, and sales trends.  
+- **Quarterly Report:** Summarizing key market metrics and providing actionable insights.  
+- **Scenario Analysis Slides:** Visual representation of potential market outcomes under different conditions.
