@@ -1,0 +1,6 @@
+# macOS 缓存文件
+.DS_Store
+
+# Jupyter 自动保存的检查点
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
