@@ -9,6 +9,22 @@ It supports analysts and managers by providing actionable insights, scenario ana
 - **Risk Manager:** Monitors potential exposure; cares about reliability and transparency.  
 - **Team Lead / PM:** Oversees project progress; cares about reproducibility and workflow clarity.
 
+## Data Storage
+
+Our project follows a structured storage convention to ensure clarity and reproducibility:
+
+### File Formats
+- **CSV**: Primary format for tabular data (easy to load with pandas).
+- **JSON**: Used when pulling from APIs with nested data.
+- **Parquet (optional)**: For efficient storage of large datasets.
+
+### How Data is Accessed
+- File paths are **not hardcoded**.  
+- Instead, environment variables defined in `.env` are used for flexibility and security.  
+- Example (`.env`):
+  ```ini
+  DATA_PATH=./data/raw/
+
 ## Repository Structure
 project/
 │
