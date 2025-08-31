@@ -25,6 +25,17 @@ Our project follows a structured storage convention to ensure clarity and reprod
   ```ini
   DATA_PATH=./data/raw/
 
+## Data Preprocessing
+
+We developed reusable cleaning functions (stored in `/src/cleaning.py`) to ensure consistent and modular data preparation.  
+Key steps include:
+- **Column Standardization**: Converting column names to lowercase with underscores for consistency.
+- **Missing Data Handling**: Dropping columns with excessive missingness (>40%) and filling others with median values.
+- **Reproducibility**: Functions are designed to be re-applied to new datasets with minimal changes.
+
+The preprocessing workflow is demonstrated in `notebooks/data_preprocessing.ipynb`, where raw data from `/data/raw/` is cleaned and saved to `/data/processed/`.  
+Final cleaned dataset: `data/processed/ibm_daily_clean.csv`.
+
 ## Repository Structure
 project/
 │
