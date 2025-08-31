@@ -18,31 +18,33 @@ It will help you connect each stage of the **Applied Financial Engineering Lifec
 
 | Lifecycle Stage | What You Did | Challenges | Solutions / Decisions | Future Improvements |
 |-----------------|--------------|------------|-----------------------|---------------------|
-| **1. Problem Framing & Scoping** | *(What was the financial problem? What were the goals, constraints, assumptions?)* | *(What made scoping tricky? Competing objectives? Ambiguity?)* | *(How did you resolve scope, define success metrics?)* | *(How could you frame/clarify better next time?)* |
-| **2. Tooling Setup** | *(Which tools, libraries, or infra did you configure?)* | *(Any environment/dependency issues?)* | *(How did you resolve setup problems?)* | *(What would you automate or streamline?)* |
-| **3. Python Fundamentals** | *(Which core Python/data skills did you apply?)* | *(Any gaps in coding fluency?)* | *(How did you close them — e.g., code reviews, practice?)* | *(What skills should you keep strengthening?)* |
-| **4. Data Acquisition / Ingestion** | *(Where did your data come from? APIs, CSVs, databases?)* | *(Any access/cleanliness issues?)* | *(How did you structure ingestion pipelines?)* | *(What would you improve — e.g., robustness, automation?)* |
-| **5. Data Storage** | *(Where/how did you store your data?)* | *(Any challenges with formats, schema, or scale?)* | *(Which design choices did you make?)* | *(What storage improvements would help?)* |
-| **6. Data Preprocessing** | *(What preprocessing/cleaning steps did you run?)* | *(Which data quality issues caused trouble?)* | *(How did you decide on imputation, normalization, etc.?)* | *(How could preprocessing be improved?)* |
-| **7. Outlier Analysis** | *(How did you detect anomalies or unusual events?)* | *(What was hard to interpret — error vs real event?)* | *(How did you decide whether to drop, cap, or keep outliers?)* | *(What techniques would you add next time?)* |
-| **8. Exploratory Data Analysis (EDA)** | *(Which visualizations, summaries, or diagnostics did you use?)* | *(Which insights were unclear or misleading?)* | *(How did you clarify patterns, distributions, correlations?)* | *(What extra EDA would help?)* |
-| **9. Feature Engineering** | *(What features did you construct? Technical indicators, lags, ratios?)* | *(Which features were difficult to design or justify?)* | *(How did you validate usefulness of features?)* | *(What domain-driven features could you add?)* |
-| **10. Modeling (Regression / Time Series / Classification)** | *(Which models did you try and why?)* | *(What challenges arose — overfitting, convergence, runtime?)* | *(How did you choose/tune the final model?)* | *(What alternative models would you try in future?)* |
-| **11. Evaluation & Risk Communication** | *(Which metrics did you evaluate?)* | *(Which assumptions/risks were most concerning?)* | *(How did you communicate uncertainty, error, tradeoffs?)* | *(What evaluation methods would improve robustness?)* |
-| **12. Results Reporting, Delivery Design & Stakeholder Communication** | *(How did you present results? Slides, reports, dashboards?)* | *(What was difficult to explain to non-technical stakeholders?)* | *(What delivery choices helped communication land?)* | *(What would you change in delivery/communication?)* |
-| **13. Productization** | *(How did you prepare the model/data pipeline for production use?)* | *(What issues arose around scalability, maintainability?)* | *(What design decisions ensured reliability?)* | *(What productization steps would you add?)* |
-| **14. Deployment & Monitoring** | *(How did you deploy your solution?)* | *(What monitoring or alerting challenges did you face?)* | *(How did you track model drift or system performance?)* | *(What would you upgrade in deployment/monitoring?)* |
-| **15. Orchestration & System Design** | *(How did you integrate tasks into workflows/pipelines?)* | *(What complexity or dependency issues appeared?)* | *(How did you solve orchestration problems?)* | *(What would you change in system design?)* |
-| **16. Lifecycle Review & Reflection** | *(What are your biggest takeaways from the full lifecycle?)* | *(Where did you struggle the most?)* | *(What patterns or strategies helped across multiple stages?)* | *(What would you do differently in your next project?)* |
+| **1. Problem Framing & Scoping** | Defined a mock regression project predicting target from synthetic features. | Ambiguity in selecting meaningful metrics for mock data. | Focused on simple RMSE/MAE metrics to evaluate predictions. | In future, frame objectives with clearer business alignment. |
+| **2. Tooling Setup** | Configured Python environment with pandas, numpy, sklearn, matplotlib, Flask. | Dependency version conflicts and notebook reproducibility. | Used `requirements.txt` and virtual environments. | Automate environment setup with scripts or containerization. |
+| **3. Python Fundamentals** | Applied data manipulation, plotting, and function design. | Limited experience with modular code and CLI interfaces. | Refactored functions into `/src/`, practiced logging and CLI wrappers. | Strengthen advanced Python skills: decorators, type hints, testing. |
+| **4. Data Acquisition / Ingestion** | Generated synthetic data and saved to JSON/CSV. | Ensuring consistent schema and reproducibility. | Created reusable ingestion functions and checkpoints. | Add automated validation of input schemas. |
+| **5. Data Storage** | Stored raw and cleaned datasets in `/data/` with versioned filenames. | Managing file paths and overwrites in notebooks. | Standardized storage paths and implemented idempotent writes. | Explore database storage for larger datasets. |
+| **6. Data Preprocessing** | Normalized features, handled missing values. | Handling edge cases in synthetic nulls. | Applied consistent preprocessing pipeline and utility functions. | Integrate more robust imputation methods. |
+| **7. Outlier Analysis** | Inspected extreme values in synthetic dataset. | Hard to distinguish true signal vs noise. | Used simple capping and logging for traceability. | Apply statistical tests or anomaly detection algorithms. |
+| **8. Exploratory Data Analysis (EDA)** | Plotted distributions, correlations, and simple metrics. | Some insights were noisy due to random data. | Focused on patterns that could affect model inputs. | Include automated dashboards for EDA summaries. |
+| **9. Feature Engineering** | Added synthetic interactions and lagged features. | Justifying feature relevance in mock data. | Evaluated feature importance using simple regression weights. | Experiment with domain-informed features for real datasets. |
+| **10. Modeling (Regression / Time Series / Classification)** | Trained linear regression models using sklearn. | Overfitting on small dataset and hyperparameter tuning. | Cross-validation and simple regularization applied. | Test additional models like Random Forest or Ridge regression. |
+| **11. Evaluation & Risk Communication** | Evaluated MAE and RMSE; communicated risk of small sample variability. | Explaining model uncertainty for synthetic data. | Visualized predictions vs true values and included warnings. | Add rolling metrics and confidence intervals. |
+| **12. Results Reporting, Delivery Design & Stakeholder Communication** | Generated simple text and plots; optional dashboard. | Simplifying technical outputs for stakeholder clarity. | Used inline plots and concise reporting in notebooks. | Build interactive dashboard for real stakeholders. |
+| **13. Productization** | Pickled trained model and reusable functions in `/src/`. | Ensuring reproducibility and modularity. | Defined clear folder structure and idempotent writes. | Add automated CI/CD pipeline for production. |
+| **14. Deployment & Monitoring** | Deployed Flask API for predictions and plotting. | Handling API latency, error handling, model drift. | Implemented logging, monitoring metrics, and alerts. | Integrate dashboards for real-time monitoring and retraining triggers. |
+| **15. Orchestration & System Design** | Defined task DAG: ingest → clean → train → report. | Managing dependencies and checkpoints. | Created logging/checkpoint plan and refactored CLI tasks. | Scale orchestration with workflow tools or scripts. |
+| **16. Lifecycle Review & Reflection** | Reviewed all stages; polished repo with clean structure and README. | Time management and balancing automation vs manual tasks. | Standardized folder structure and documented pipeline thoroughly. | Next project: strengthen automation, testing, and dashboarding. |
+
+
 
 ---
 
 ## Reflection Prompts
 
-- Which stage was the most **difficult** for you, and why?  
-- Which stage was the most **rewarding**?  
-- How do the stages **connect** — where did one stage’s decisions constrain or enable later stages?  
-- If you repeated this project, what would you **do differently across the lifecycle**?  
-- Which skills do you most want to **strengthen** before your next financial engineering project?  
+- **Most difficult stage:** Deployment & Monitoring due to integrating Flask, logging, and alerting.  
+- **Most rewarding stage:** Modeling and EDA, where predictions and insights came together.  
+- **Stage connections:** Decisions on preprocessing directly impacted model performance; orchestration influenced reproducibility.  
+- **If repeated:** Automate more ingestion, preprocessing, and reporting; integrate dashboards earlier.  
+- **Skills to strengthen:** Advanced Python, API design, automated workflow orchestration, and interactive dashboards.  
 
 ---
